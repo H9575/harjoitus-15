@@ -1,0 +1,23 @@
+/*	Jani Kähkönen/H9575
+Harjoitus_15	21.9.2014	*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string s1, s2;
+	int i, j;
+
+	getline(cin, s1);
+
+	for (i = 0; s1[i] != '\0'; i++);
+
+	s2 = s1;
+	for (j = 0, i = i - 1; i >= 0; j++, i--)
+	{
+		s1[i] = s2[j];
+	}
+	if (s1 == s2){ cout << s1 << " on palindromi\n"; }else{ cout << s1 << " ei palindromi\n"; }
+}
